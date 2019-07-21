@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
     public float speed;
     public int armour;
     public GameObject explosion;
-
+    
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -28,7 +28,11 @@ public class EnemyController : MonoBehaviour
                     Instantiate(explosion, transform.position, transform.rotation);
                 }
             }
-            Destroy(other.gameObject);
+            Bullet bullet = other.gameObject.GetComponent<Bullet>();
+            if(bullet!=null)
+            {
+                bullet.Explode();
+            }
         }
     }
 }
