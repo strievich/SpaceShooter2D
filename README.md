@@ -6,3 +6,5 @@ Unity 2019.1.9a14 was used.
 Controls are:
 WASD - movement 
 Space - fire
+
+Download from https://werewolf-studio.itch.io/spaceshooter2d
